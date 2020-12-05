@@ -1,0 +1,17 @@
+CREATE TABLE Manager
+( 
+    id int identity(1, 1),
+    Name nvarchar(20),
+    Position nvarchar(20)
+)
+
+
+INSERT INTO Manager VALUES( "John ","CEO")
+INSERT INTO Manager VALUES( "Pat","CTO")
+
+SELECT 
+CASE WHEN Position = "CEO" THEN Name + 'Boss'
+END AS Designation
+FROM Manager ;
+
+
